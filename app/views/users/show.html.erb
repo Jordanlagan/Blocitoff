@@ -4,3 +4,7 @@
 <p>Account created: <%= current_user.created_at %></p>
 <p>Account updated: <%= current_user.updated_at %></p>
 <p>Account email address: <%= current_user.email %></p>
+<h2>Tasks</h2>
+<% @items.each do |i| %>
+  <%= render partial: 'items/item', locals: { item: i } %>
+<% end %>

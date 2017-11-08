@@ -1,0 +1,10 @@
+<%= form_for [user, item] do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, placeholder: "Enter the task" %>
+  </p>
+
+  <p>
+    <%= f.submit "Save", class: 'btn btn-success' %>
+  </p>
+<% end %>
