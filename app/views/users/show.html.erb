@@ -1,9 +1,8 @@
-<h1>Hello <%= current_user.email %></h1>
-<p>Welcome to Blocitoff</p>
+<h1>User: <%= @user.email %></h1>
 
 <p>Account created: <%= current_user.created_at %></p>
 <p>Account updated: <%= current_user.updated_at %></p>
-<p>Account email address: <%= current_user.email %></p>
+<p>Account email address: <%= @user.email %></p>
 <h2>Tasks</h2>
 <% @items.each do |i| %>
   <%= render partial: 'items/item', locals: { item: i } %>
